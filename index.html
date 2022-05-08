@@ -94,16 +94,16 @@
     function registrationData(){
         event.preventDefault();
 
-        // var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
+        var formData = [];
 
         var formObj = {
             email: basicForm.email.value,
             mobile: basicForm.number.value,
             password: basicForm.password.value
         }
-        // formData.push(formObj);
+        formData.push(formObj);
 
-        localStorage.setItem("registrationData", JSON.stringify(formObj));
+        localStorage.setItem("registrationData", JSON.stringify(formData));
         window.location.href = "login.html";
     }
 </script>
